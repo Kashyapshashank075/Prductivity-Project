@@ -1,0 +1,104 @@
+:root {
+  --pri: #e5b299;
+  --sec: #7d5a50;
+  --tri1: #b4846c;
+  --tri2: #fcdec0;
+}
+
+@font-face {
+  font-family: light;
+  font-weight: 400;
+  src: url(./Aeonika-BF66fcc5a8cc5db.otf);
+}
+@font-face {
+  font-family: light;
+  font-weight: 200;
+  src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: light;
+  font-weight: 500;
+  src: url(./AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: bold;
+  font-weight: 700;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+}
+h1 {
+  font-family: light;
+  font-weight: 200;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: var(--tri1);
+}
+
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.elem {
+  background-color: #feba17;
+  overflow: hidden;
+  font-size: 30px;
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+  position: relative;
+  transition: all ease 0.2s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+  font-family: light;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.elem:active {
+  scale: 0.97;
+}
