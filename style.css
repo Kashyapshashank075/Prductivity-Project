@@ -1,7 +1,7 @@
 :root {
   --pri: #e5b299;
-  --sec: #7d5a50;
-  --tri1: #b4846c;
+  --sec: #521c0d;
+  --tri1: #a86523;
   --tri2: #fcdec0;
 }
 
@@ -63,6 +63,7 @@ section.allElems {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 40px;
+  position: absolute;
 }
 
 .elem {
@@ -96,9 +97,289 @@ section.allElems {
   right: 5%;
   font-family: light;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 33px;
 }
 
 .elem:active {
   scale: 0.97;
+}
+
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 20px;
+  display: none;
+  position: absolute;
+}
+
+.back {
+  padding: 10px;
+  border-radius: 10%;
+  background-color: red;
+  position: absolute;
+  right: 5%;
+  font-family: light;
+  font-weight: 500;
+  font-size: 20px;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+
+.todo-list-fullpage {
+  /* background-color: red; */
+  /* display: block; */
+}
+.todo-list-fullpage h2 {
+  font-family: light;
+  font-weight: 700;
+  font-size: 43px;
+}
+
+.todo-list-fullpage .todo-container {
+  height: 80%;
+  width: 100%;
+  /* background-color: #b4846c; */
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-container .add-task {
+  height: 100%;
+  width: 33%;
+  background-color: var(--tri1);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.todo-list-fullpage .todo-container .add-task form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 20px;
+}
+
+.todo-list-fullpage .todo-container .add-task form input#task-input {
+  background-color: var(--tri2);
+  font-size: 25px;
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.todo-list-fullpage .todo-container .add-task form textarea {
+  width: 100%;
+  height: 80%;
+  padding: 15px 10px;
+  background-color: var(--tri2);
+  font-size: 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.todo-container .add-task form button {
+  width: 100%;
+  background-color: #feba17;
+  padding: 15px 10px;
+  font-size: 25px;
+  font-family: light;
+  font-weight: 700;
+  transition: all ease 0.3s;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.todo-container .add-task form button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.todo-list-fullpage .todo-container .all-task {
+width: 65%;
+    background-color: var(--tri1);
+    height: 100%;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.task {
+ display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.task h5 {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: flex-start;
+  gap:20px;
+}
+.task h5 span{
+  color:white;
+  font-size: 10px;
+  background-color: red;
+  padding: 4px 6px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.task h5 span.true{
+  opacity: 1;
+}
+.task h5 span.false{
+  opacity: 0;
+}
+.task button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  transition: all ease 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+}
+
+.task button:active {
+  transform: scale(0.96);
+  -webkit-transform: scale(0.96);
+  -moz-transform: scale(0.96);
+  -ms-transform: scale(0.96);
+  -o-transform: scale(0.96);
+}
+
+.mark-imp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 10px;
+  gap: 20px;
+}
+
+.mark-imp input {
+  scale: 2;
+}
+
+.mark-imp label{
+  font-size: 20px;
+}
+
+
+/*daily planner*/
+
+.daily-planner-fullpage{
+  display: block;
+}
+.daily-planner-fullpage h2{
+  font-size: 40px;
+}
+.daily-planner-fullpage .day-planner{
+  background-color: var(--tri1);
+  height: 85%;
+  width: 100%;
+  margin-top: 40px;
+  padding: 30px; 
+   display: flex; 
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: auto;  
+  justify-content: space-between; 
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  position: relative;
+  width:49%;
+  margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p{
+  position: absolute;
+  top:10%;
+  left:1%;
+  font-size: 18px;
+}
+
+.day-planner .day-planner-time input{
+  padding: 20px 45px;
+  width: 100%;
+  font-family: light;
+  font-weight: 200;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border:none;
+  font-size: 32px;
+  padding-top:34px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
